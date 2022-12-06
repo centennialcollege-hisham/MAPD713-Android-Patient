@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "49710522661",
+    "firebase_url": "https://zero1tech-company.firebaseio.com",
+    "project_id": "zero1tech-company",
+    "storage_bucket": "zero1tech-company.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:49710522661:android:80bb311899bff19e36bacc",
+        "android_client_info": {
+          "package_name": "com.centennial.mapd711.assignment3.hisham"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "49710522661-kcgf18nkaafqojoif3ve5d3k6u2qpl1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsZUN9H41XlBvKB7SP_LC7msC7qGVX20M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "49710522661-kcgf18nkaafqojoif3ve5d3k6u2qpl1a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
