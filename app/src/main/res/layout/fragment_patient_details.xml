@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.heba.mapd713.patient.data.model.PatientResponse" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/text_view_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#BCBCBC"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@{data.name}"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Heba Al-Sayyed" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_view_delete"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="4dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="fitCenter"
+            android:src="@android:drawable/ic_delete"
+            app:layout_constraintBottom_toBottomOf="@+id/text_view_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_view_name" />
+
+
+        <ImageView
+            android:id="@+id/image_view"
+            imageUri="@{data.photo}"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_name" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@{ `Address : ` + data.address}"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_mobile"
+            app:layout_constraintStart_toEndOf="@+id/image_view"
+            app:layout_constraintTop_toTopOf="@+id/image_view"
+            tools:text="Address toronto" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@{ `Mobile : ` + data.mobile}"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_birthdate"
+            app:layout_constraintStart_toEndOf="@+id/image_view"
+            app:layout_constraintTop_toBottomOf="@+id/tv_address"
+            tools:text="Address toronto" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_birthdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@{ `birthdate : ` + data.birthdate}"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_email"
+            app:layout_constraintStart_toEndOf="@+id/image_view"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mobile"
+            tools:text="Address toronto" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@{ `Email : ` + data.email}"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/image_view"
+            app:layout_constraintStart_toEndOf="@+id/image_view"
+            app:layout_constraintTop_toBottomOf="@+id/tv_birthdate"
+            tools:text="Address toronto" />
+
+
+        <TextView
+            android:id="@+id/text_view_tests"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#BCBCBC"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="History of Tests"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_view" />
+
+
+        <TextView
+            android:id="@+id/text_view_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="10dp"
+            android:text="Type"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_tests" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="45dp"
+            android:layout_marginBottom="16dp"
+            android:text="Reading Value"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_view"
+            app:layout_constraintTop_toTopOf="@+id/text_view_label" />
+
+        <com.google.android.material.card.MaterialCardView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_label">
+
+            <ListView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/row_test" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
