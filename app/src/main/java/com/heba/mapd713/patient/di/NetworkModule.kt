@@ -39,7 +39,7 @@ object NetworkModule {
         converterFactory: Converter.Factory
     ): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://patients-app-api.herokuapp.com/")
+            .baseUrl("https://patient-1a28a0069ca5.herokuapp.com/")
             .client(okHttpClient)
             .addConverterFactory(converterFactory)
             .build()
